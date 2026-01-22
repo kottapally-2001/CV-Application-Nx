@@ -1,0 +1,165 @@
+/* ===== Global ===== */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --bg: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --border: rgba(0, 0, 0, 0.08);
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
+}
+
+/* ===== App Container ===== */
+.app {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, var(--primary), #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Card Sections ===== */
+.section {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* ===== Inputs ===== */
+.section input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15);
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, var(--primary), #6366f1);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--primary-dark), #4f46e5);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+}
+
+.section button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ===== Errors ===== */
+.error,
+span.error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ===== CV Preview ===== */
+.cv-preview {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.cv-preview h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.cv-preview h3 {
+  margin-top: 1.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.cv-preview p {
+  margin: 0.3rem 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Divider */
+.cv-preview section {
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .section,
+  .cv-preview {
+    padding: 1.25rem;
+  }
+}

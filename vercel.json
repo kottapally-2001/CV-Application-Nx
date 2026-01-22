@@ -1,0 +1,7 @@
+
+{
+  "builds": [
+    { "src": "apps/web", "use": "@vercel/static-build" },
+    { "src": "apps/api/*.ts", "use": "@vercel/node" }
+  ]
+}

@@ -1,0 +1,12 @@
+
+{
+  "name": "cv-nx-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "nx serve web",
+    "build": "nx build web"
+  },
+  "devDependencies": {
+    "nx": "^18.0.0"
+  }
+}
