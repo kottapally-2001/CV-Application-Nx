@@ -1,20 +1,18 @@
 {
   "name": "web",
-  "sourceRoot": "apps/web/src",
   "projectType": "application",
+  "sourceRoot": "apps/web",
   "targets": {
     "serve": {
       "executor": "@nx/vite:dev-server",
       "options": {
-        "buildTarget": "web:build",
-        "configFile": "apps/web/vite.config.ts"
+        "buildTarget": "web:build"
       }
     },
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "configFile": "apps/web/vite.config.ts",
         "outputPath": "dist/apps/web"
       }
     }
