@@ -1,10 +1,13 @@
 {
-  "buildCommand": "npx nx build web",
+  "buildCommand": "npm install && npx nx build web",
   "outputDirectory": "dist/apps/web",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+  "functions": {
+    "apps/api/*.ts": {
+      "runtime": "nodejs18.x"
     }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
