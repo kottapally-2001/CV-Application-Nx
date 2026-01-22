@@ -1,7 +1,10 @@
-
 {
-  "builds": [
-    { "src": "apps/web", "use": "@vercel/static-build" },
-    { "src": "apps/api/*.ts", "use": "@vercel/node" }
+  "buildCommand": "npx nx build web",
+  "outputDirectory": "dist/apps/web",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
