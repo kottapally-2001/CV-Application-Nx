@@ -1,7 +1,7 @@
 {
   "name": "web",
   "projectType": "application",
-  "sourceRoot": "apps/web",
+  "sourceRoot": "apps/web/src",
   "targets": {
     "serve": {
       "executor": "@nx/vite:dev-server",
